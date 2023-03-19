@@ -50,3 +50,12 @@
     position: relative;
     bottom: 18px;
 }
+
+.locations h3, .amenities h3 {
+    font-weight: 600;
+}
+
+.amenities h4, .locations h4 {
+    font-weight: 400;
+    font-size: 14px;
+}
