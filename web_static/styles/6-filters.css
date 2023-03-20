@@ -22,9 +22,10 @@
     bottom: 70px;
 }
 
-.container .filters .button p {
+.container .filters .button h4 {
     position: relative;
-    bottom: 5px;
+    bottom: 10px;
+    font-weight: lighter;
 }
 .container .filters .button:hover {
     opacity: 90%;
@@ -72,6 +73,7 @@
     display: none;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
+    z-index:1;
 }
 
 .locations:hover .popover, .amenities:hover .popover {
@@ -87,10 +89,14 @@
     font-size: 16px;
 }
 
+.state-list-type, .state-name {
+    position: relative;
+    left: 40px;
+}
 .state-list-type {
     list-style-type: none;
     position: relative;
-    right: 17px;
+    left: 20px;
     bottom: 11px;
 }
 .am-list-type ul, .am-list-type {
