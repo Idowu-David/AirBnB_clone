@@ -42,9 +42,6 @@
     border: 1px #DDDDDD solid;
 }
 
-.locations:hover {
-    background-color: red;
-}
 .amenities {
     width: 50%;  
     border: 1px #DDDDDD solid; 
@@ -68,35 +65,37 @@
     left: 40px;
 }
 
+
 .popover {
-    
+    position: absolute;
+    background-color: #FAFAFA;
+    border: #DDDDDD 1px solid;
+    border-radius: 4px;
+    display: none;
 }
 
-.st-list, .am-list {
-    border: 1px red solid;
+.locations:hover .popover, .amenities:hover .popover {
+    display:  block;    
+}
+.st-list, .am-list-type {
     position: relative;
     bottom: 20px;
-    height: 210px;
-    /* display: none; */
-}
-
-.amenities:hover {
-    background-color: blue;
+    height: 180px;
 }
 
 .state-name {
     font-size: 16px;
 }
+
 .state-list-type {
     list-style-type: none;
     position: relative;
     right: 17px;
     bottom: 11px;
 }
-
-.amenities .am-list {
-    color: red;
+.am-list-type ul, .am-list-type {
     list-style-type: none;
     position: relative;
-    top: 20px;
+    height: 100px;
 }
+
