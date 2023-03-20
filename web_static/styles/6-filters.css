@@ -39,12 +39,10 @@
 .locations {
     width: 50%;
     border-right: #DDDDDD solid 1px;
-    border: 1px #DDDDDD solid;
 }
 
 .amenities {
     width: 50%;  
-    border: 1px #DDDDDD solid; 
 }
 
 .inner-text {
@@ -72,6 +70,8 @@
     border: #DDDDDD 1px solid;
     border-radius: 4px;
     display: none;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
 }
 
 .locations:hover .popover, .amenities:hover .popover {
