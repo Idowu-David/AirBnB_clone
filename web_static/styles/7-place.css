@@ -1,0 +1,21 @@
+.place h1 {
+    font-size: 30x;
+    text-align: left;
+}
+
+.place article {
+    width: 390px;
+    padding: 20px;
+    margin: 20px;
+    border: #FF5A5F 1px solid;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.place .flex-place {
+    display: flex;
+}
+
+.place .a-suite {
+    margin: 0 auto;
+}
