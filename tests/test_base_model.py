@@ -7,7 +7,7 @@ from models.base_model import BaseModel
 
 class BaseTest(unittest.TestCase):
     """Tests the BaseModel class"""
-    
+
     def setUp(self):
         self.obj1 = BaseModel()
         self.obj2 = BaseModel()
