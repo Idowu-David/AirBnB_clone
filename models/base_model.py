@@ -17,14 +17,23 @@ import uuid
 from datetime import datetime
 
 
+format = "%Y-%m-%dT%H:%M:%S.%f"
+
 class BaseModel:
     """defines all common attributes/methods for other classes"""
-    def __init__(self):
-        """public instance attributes"""
+    def __init__(self, *args, **kwargs):
+        """Constructor"""
         self.id = str(uuid.uuid4())
         self.created_at = datetime.now()
         self.updated_at = self.created_at
 
+        if kwargs:
+            for key, value in kwargs.items():
+                if key != "__class__":
+                    if key in ["created_at", "updated_at"]:
+                        value = datetime.strptime(value, format)
+                    setattr(self, key, value)
+                
     def __str__(self):
         """the string representation of the object"""
         name = self.__class__.__name__
