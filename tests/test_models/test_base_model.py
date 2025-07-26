@@ -55,6 +55,7 @@ class BaseTest(unittest.TestCase):
         model2 = BaseModel(**model1_json)
         self.assertNotEqual(model1, model2)
         self.assertIsInstance(model1.created_at, datetime)
+
         for attr in model2.__dict__:
             with self.subTest(attr=attr):
                 self.assertIn(attr, model1_json)

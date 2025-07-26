@@ -16,8 +16,8 @@ Attr:
 import uuid
 from datetime import datetime
 
-
 format = "%Y-%m-%dT%H:%M:%S.%f"
+
 
 class BaseModel:
     """defines all common attributes/methods for other classes"""
@@ -33,7 +33,10 @@ class BaseModel:
                     if key in ["created_at", "updated_at"]:
                         value = datetime.strptime(value, format)
                     setattr(self, key, value)
-                
+        else:
+            from models import storage
+            storage.new(self)
+
     def __str__(self):
         """the string representation of the object"""
         name = self.__class__.__name__
@@ -42,7 +45,9 @@ class BaseModel:
     def save(self):
         """updates the public instance attribute `updated_at` with the current
         datetime"""
+        from models import storage
         self.updated_at = datetime.now()
+        storage.save()
 
     def to_dict(self):
         """returns a dictionary containing all keys/values of __dict__
