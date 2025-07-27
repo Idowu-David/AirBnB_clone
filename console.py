@@ -18,7 +18,7 @@ class HBNBCommand(cmd.Cmd):
         print("")
         return True
     
-    def emptyline(self, arg):
+    def emptyline(self):
         """ Do nothing on empty input line """
         pass
 
