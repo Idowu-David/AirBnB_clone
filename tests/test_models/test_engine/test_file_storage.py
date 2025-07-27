@@ -6,7 +6,7 @@ import unittest
 from models.base_model import BaseModel
 
 
-class FileStorageTest(unittest.TestCase):
+class TestFileStorage(unittest.TestCase):
 
     # def setUp(self):
     #     """ sets up the obj """
