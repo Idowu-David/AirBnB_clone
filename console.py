@@ -87,5 +87,26 @@ class HBNBCommand(cmd.Cmd):
         del dicts[clss]
         storage.save()
 
+    def do_all(self, class_name=None):
+        """
+        Prints all string representation of all instances based or not
+        on the class name
+        """
+        dicts = storage.all()
+        obj_list = []
+
+        if class_name:
+            if class_name not in classes:
+                print(" ** class doesn't exist **")
+                return
+            for key, value in dicts.items():
+                if key.split(".")[0] == class_name:
+                    obj_list.append(str(value))
+        else:
+            for value in dicts.values():
+                obj_list.append(str(value))
+        print(obj_list)
+
+
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
